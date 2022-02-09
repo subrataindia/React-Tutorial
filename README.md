@@ -17,9 +17,9 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Nav/>
       <Router>
+        <Header/>
+        <Nav/>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
@@ -27,8 +27,8 @@ function App() {
           <Route exact path="/post/:id" element={<PostPage />} />
           <Route exact path="*" element={<Missing />} />
         </Routes>
+        <Footer/>
       </Router>  
-      <Footer/>
     </div>
   );
 }
