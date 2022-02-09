@@ -65,3 +65,11 @@ const Nav = ({search, setSearch}) => {
 
 export default Nav;
 ~~~
+
+## Filter posts as per search
+
+~~~javascript
+  useEffect(() =>{
+    const filteredResults = posts.filter(post => ((post.body).toLowerCase()).includes(search.toLowerCase))
+  },[posts, search])
+~~~
